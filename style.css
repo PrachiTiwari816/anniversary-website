@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fff8fb,
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #f8dce6,
+            #fff1f5,
+            #ead9e8
+        );
+
+    color: #4b2634;
+
+    overflow-x: hidden;
+
+    padding: 25px 0;
+}
+
+.story-container {
+    width: 92%;
+    max-width: 700px;
+
+    min-height: 520px;
+
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.84);
+
+    border-radius: 30px;
+
+    padding: 55px 45px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(100, 45, 70, 0.18);
+
+    backdrop-filter: blur(12px);
+
+    overflow: hidden;
+}
+
+.page {
+    display: none;
+
+    text-align: center;
+
+    animation: fadeIn 0.8s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+.small-text {
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #a85a75;
+
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 42px;
+
+    color: #963f5c;
+
+    margin-bottom: 25px;
+
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 24px;
+
+    font-weight: normal;
+
+    margin-bottom: 30px;
+
+    color: #754050;
+}
+
+p {
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    margin-bottom: 28px;
+}
+
+.quote {
+    margin: 35px 0;
+
+    padding: 25px;
+
+    border-left: 4px solid #b85c78;
+
+    border-right: 4px solid #b85c78;
+
+    font-size: 28px;
+
+    font-style: italic;
+
+    color: #9c4562;
+}
+
+button {
+    border: none;
+
+    padding: 14px 28px;
+
+    margin-top: 10px;
+
+    border-radius: 30px;
+
+    background: #a94f6b;
+
+    color: white;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 8px 20px
+        rgba(150, 60, 90, 0.2);
+}
+
+button:hover {
+    transform:
+        translateY(-3px)
+        scale(1.04);
+
+    background: #873b55;
+}
+
+.love-list {
+    text-align: left;
+
+    max-width: 530px;
+
+    margin: 0 auto 30px;
+}
+
+.love-list p {
+    margin-bottom: 13px;
+
+    font-size: 18px;
+}
+
+input {
+    width: 190px;
+
+    padding: 13px 18px;
+
+    border:
+        1px solid #d99aae;
+
+    border-radius: 25px;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    margin: 10px;
+}
+
+input:focus {
+    border-color: #a94f6b;
+
+    box-shadow:
+        0 0 10px
+        rgba(169, 79, 107, 0.2);
+}
+
+#codeMessage {
+    color: #963f5c;
+
+    font-weight: bold;
+
+    min-height: 25px;
+
+    margin-top: 10px;
+}
+
+.letter {
+    text-align: left;
+
+    font-size: 18px;
+}
+
+.final-page {
+    padding-top: 5px;
+}
+
+.final-page h1 {
+    font-size: 38px;
+}
+
+.final-message {
+    font-size: 19px;
+}
+
+.big-heart {
+    font-size: 70px;
+
+    color: #b94f72;
+
+    animation:
+        heartbeat 1.5s
+        infinite;
+}
+
+.hearts::before,
+.hearts::after {
+
+    content:
+        "♥  ♥  ♥  ♥  ♥";
+
+    position: fixed;
+
+    top: 8%;
+
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    color:
+        rgba(174, 75, 108, 0.12);
+
+    font-size: 35px;
+
+    letter-spacing: 50px;
+
+    pointer-events: none;
+}
+
+.hearts::after {
+
+    top: auto;
+
+    bottom: 8%;
+
+    font-size: 25px;
+
+    letter-spacing: 35px;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.12);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .story-container {
+        padding:
+            40px 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .quote {
+        font-size: 23px;
+    }
+
+    .final-page h1 {
+        font-size: 30px;
+    }
+}
